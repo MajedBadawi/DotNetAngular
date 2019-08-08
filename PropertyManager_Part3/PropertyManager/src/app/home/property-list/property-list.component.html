@@ -1,0 +1,68 @@
+<br><div class="propertyListing" style="margin:10px;">
+
+        <div class="search-div">
+            <button mat-raised-button (click)="onCreate()">
+                <mat-icon>add</mat-icon>Create
+            </button>
+            <!-- <mat-form-field class="search-form-field" floatLabel="never">
+                <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+                <button mat-button matSuffix mat-icon-button aria-label="Clear"*ngIf="searchKey" (click)="onSearchClear()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field> -->
+        </div><br>
+            
+        <div class="mat-elevation-z8">
+            <mat-table [dataSource]="propertyList">
+                <ng-container matColumnDef="Id">
+                    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.Id}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Title">
+                    <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.Title}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Address">
+                    <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.Address}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="NumberOfRooms">
+                    <mat-header-cell *matHeaderCellDef>Number Of Rooms</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.NumberOfRooms}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Price">
+                    <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+                    <mat-cell *matCellDef="let element">{{element.Price}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Update">
+                    <mat-header-cell *matHeaderCellDef>Update</mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <button mat-icon-button (click)="onUpdate(row)"><mat-icon>launch</mat-icon></button>
+                    </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="Purchase">
+                    <mat-header-cell *matHeaderCellDef>Purchase</mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <button mat-icon-button *ngIf="row.Purchased=='0'" (click)="onPurchase(row.Id)"><mat-icon>attach_money</mat-icon></button>
+                        <button mat-icon-button *ngIf="row.Purchased=='1'" [disabled]="true"><mat-icon>money_off</mat-icon></button>
+                    </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        Loading properties...
+                    </mat-footer-cell>
+                </ng-container>
+                <ng-container matColumnDef="noData">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        No properties yet.
+                    </mat-footer-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':propertyList!=null}"></mat-footer-row>
+                <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(propertyList!=null && propertyList.data.length==0)}"></mat-footer-row>
+            </mat-table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+        </div>
+
+</div>

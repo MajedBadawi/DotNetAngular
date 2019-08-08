@@ -1,0 +1,21 @@
+<div class="main-content-agile">
+	<h1>PROPERTY MANAGER</h1>
+	<div class="sub-main-w3" style="margin-bottom: 20px;">
+		<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+			<div class="form-style-agile required">
+				<label>Username</label>
+				<div class="pom-agile">
+					<input placeholder="Enter Username" name="Username" type="text" #UserName="ngModel" [(ngModel)]="formModel.UserName" required>
+				</div>
+			</div>
+			<div class="form-style-agile required">
+				<label>Password</label>
+				<div class="pom-agile">
+					<input placeholder="Enter Password" name="Password" type="password" #Password="ngModel" [(ngModel)]="formModel.Password" required>
+				</div>
+			</div>
+			<div class="clear"></div>
+            <button type="submit" class="submitBtn btn btn-lg btn-block" [disabled]="form.invalid">LogIn</button>
+		</form>
+	</div>
+</div>

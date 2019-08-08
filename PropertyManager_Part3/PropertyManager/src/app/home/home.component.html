@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-dark" *ngIf="userInfo">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand text-white"><strong>User: </strong>{{userInfo.Name}}</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="userProperty"><span>Credit: </span>{{userInfo.Credit}}</li>
+            <li class="userProperty"><span>Owned Properties: </span>{{userInfo.NumberOfOwnedProperties}}</li>
+            <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <mat-toolbar>
+        <span class="fill-remaining-space"></span>
+        <h1 class="projectName">Property Manager</h1>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+</div>
+
+<app-property-list></app-property-list>
+
+<footer style="text-align:center;background:#9a9a9a;">
+    <hr>
+    <span style="margin-right:10px;">Developed by <a href="https://www.linkedin.com/in/majed-badawi-3b376a125/">@Majed Badawi</a></span><br>
+</footer>

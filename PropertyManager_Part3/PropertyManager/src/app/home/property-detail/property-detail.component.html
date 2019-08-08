@@ -1,0 +1,49 @@
+<mat-toolbar>
+    <span>{{service.propertyform.controls['Id'].value?"Modify Property Details":"New Property"}}</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+
+<form [formGroup]="service.propertyform" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="details-container">
+                <input type="hidden" formControlName="Id" *ngIf="service.propertyform.controls['Id'].value==null"/>
+                <mat-form-field>
+                    <input formControlName="Title" matInput placeholder="Title *"/>
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select formControlName="NumberOfRooms" placeholder="Number Of Rooms *">
+                        <mat-option>None</mat-option>
+                        <mat-option [value]="1">1</mat-option>
+                        <mat-option [value]="2">2</mat-option>
+                        <mat-option [value]="3">3</mat-option>
+                        <mat-option [value]="4">4</mat-option>
+                        <mat-option [value]="5">5</mat-option>
+                        <mat-option [value]="6">6</mat-option>
+                        <mat-option [value]="7">7</mat-option>
+                        <mat-option [value]="8">8</mat-option>
+                    </mat-select>
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <mat-form-field [hidden]="getOperationStatus()">
+                    <input ng-Model="Price" type="number" formControlName="Price" matInput placeholder="Price *" min="0"/>
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="details-container">
+                <mat-form-field>
+                    <textarea formControlName="Address" matInput placeholder="Address *"></textarea>
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="service.propertyform.invalid">Submit</button>
+                    <button mat-raised-button color="warn" (click)="onClick()">Clear</button>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

@@ -1,0 +1,54 @@
+div.container{
+    margin-top:10px;
+}
+
+.userProperty{
+    color:white;
+    padding: 20px;
+}
+
+.userProperty span{
+    font-style: italic;
+}
+
+.projectName{
+    font-family: 'Times New Roman';
+    color:black;
+    font-size: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.navbar-nav { 
+    flex-direction: row;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+form.normal-form{
+    margin:10px;
+}
+
+.details-container {
+    width:100%;
+    padding:5%;
+}
+
+.button-row button{
+    margin:5px;
+}
+
+mat-form-field{
+    width:100% !important;
+}
+
+.hide {
+    display:none;
+}
+
+mat-footer-row mat-footer-cell {
+    justify-content: center;
+    font-style: italic;
+}

@@ -1,0 +1,14 @@
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\bin\Debug\netcoreapp2.2\Assignment3.deps.json
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\bin\Debug\netcoreapp2.2\Assignment3.runtimeconfig.json
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\bin\Debug\netcoreapp2.2\Assignment3.runtimeconfig.dev.json
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\bin\Debug\netcoreapp2.2\Assignment3.dll
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.csprojAssemblyReference.cache
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.csproj.CoreCompileInputs.cache
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.RazorAssemblyInfo.cache
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.RazorAssemblyInfo.cs
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.AssemblyInfoInputs.cache
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.AssemblyInfo.cs
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.RazorTargetAssemblyInfo.cache
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\bin\Debug\netcoreapp2.2\Assignment3.pdb
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.dll
+C:\Users\Majed\Desktop\MajedBadawi_CME\PropertyManager_Part3\Assignment3\obj\Debug\netcoreapp2.2\Assignment3.pdb

@@ -1,0 +1,48 @@
+<div class="main-content-agile">
+	<h1>PROPERTY MANAGER</h1>
+	<div class="sub-main-w3" style="margin-bottom: 20px;">
+		<form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+			<div class="form-style-agile required">
+				<label>Username</label>
+				<div class="pom-agile">
+					<input placeholder="Enter Username" name="Username" type="text" formControlName="UserName">
+					<label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">This field is mandatory.</label>
+				</div>
+			</div>
+			<div class="form-style-agile required">
+				<label>Name</label>
+				<div class="pom-agile">
+					<input placeholder="Enter Name" name="Name" type="text" formControlName="Name">
+					<label class="text-danger" *ngIf="service.formModel.get('Name').touched && service.formModel.get('Name').errors?.required">This field is mandatory.</label>
+				</div>
+			</div>
+			<div class="form-style-agile required">
+				<label>Credit</label>
+				<div class="pom-agile">
+					<input placeholder="Enter Credit" name="Credit" type="number" formControlName="Credit">
+					<label class="text-danger" *ngIf="service.formModel.get('Credit').touched && service.formModel.get('Credit').errors?.required">This field is mandatory.</label>
+				</div>
+			</div>
+			<div style="width:100%" formGroupName="Passwords">
+				<div class="form-style-agile required">
+					<label>Password</label>
+					<div class="pom-agile">
+						<input placeholder="Enter Password" name="Password" type="password" formControlName="Password">
+						<label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">This field is mandatory.</label>
+          				<label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">Minimum 6 characters required.</label>
+					</div>
+				</div>
+				<div class="form-style-agile required">
+					<label>Confirm Password</label>
+					<div class="pom-agile">
+						<input placeholder="Confirm Password" name="Confirm Password" type="password" formControlName="ConfirmPassword">
+						<label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required">This field is mandatory.</label>
+          				<label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Confirm Password does not match.</label>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<button type="submit" class="submitBtn btn btn-lg btn-block" [disabled]="!service.formModel.valid">Register</button>
+		</form>
+	</div>
+</div>
